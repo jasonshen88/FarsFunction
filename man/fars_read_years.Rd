@@ -2,31 +2,32 @@
 % Please edit documentation in R/fars_functions.R
 \name{fars_read_years}
 \alias{fars_read_years}
-\title{Reads month and year from accident files}
+\title{Read FARS data files of given years}
 \usage{
 fars_read_years(years)
 }
 \arguments{
-\item{years}{A vector or list of years in numeric or integer format.}
+\item{years}{A numeric vector containing the years of which the
+FARS data is asked}
 }
 \value{
-Returns a list of tibbles (data frames) with the same number of rows
-as the data in "accident_<year>.csv.bz2" files and two columns - MONTH and
-year. Returns NULL and a warning if the file does not exist.
+A list of data.frames or NULL if the year resulted in an invalid file
 }
 \description{
-The function accepts a vector or list of years and returns a list of data
-frames with MONTH and year columns based on data in "accident_<year>.csv.bz2
-files. The files need to be located in the working directory.
+This function returns a list of data files per year, as specified by the
+parameter years. The parameter is used to create filenames, using the
+make_filename helper function. If an invalid year is passed, the return
+value for that year is NULL
+}
+\note{
+if any of the numbers in years is not valid, the list will contain
+"NULL" at that index, and a "invalid year" warning will be issued. Much of the
+detail in the data available in the FARS dataset is ignored, as only MONTH
+and year are selected.
 }
 \examples{
 \dontrun{
-fars_read_years(2013:2015)
-fars_read_years(list(2013, 2014))
-
-# Results in a warning
-fars_read_years(2016)
-}
+fars_read_years(2015)
+fars_read_years(c(2013, 2014, 2015))}
 
 }
-

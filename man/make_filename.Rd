@@ -2,25 +2,25 @@
 % Please edit documentation in R/fars_functions.R
 \name{make_filename}
 \alias{make_filename}
-\title{Creates a filename}
+\title{Create FARS data filename by year}
 \usage{
 make_filename(year)
 }
 \arguments{
-\item{year}{Numerical of integer input indicating a year of a data set.}
+\item{year}{The year which the datafile is asked for.}
 }
 \value{
-Returns a character string in a format "accident_<year>.csv.bz2" that
-can be used as a file name
+A character string with format: "accident_yyyy.csv.bz2", where
+yyyy is the year parameter passed.
 }
 \description{
-The function creates a filename for a .csv.bz2 file based on the \code{year}
-argument in a form "accident_<year>.csv.bz2". It requires a numerical or
-integer input otherwise ends with an error.
+This Helper-function constructs a valid FARS filename from a given year
+}
+\note{
+there is no check whether the number is a valid year for the FARS data,
+any typo or garbled number will result in a filename, correct or not.
 }
 \examples{
 \dontrun{
-makefilename(2016)
+make_filename(2015)}
 }
-}
-

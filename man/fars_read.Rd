@@ -2,24 +2,32 @@
 % Please edit documentation in R/fars_functions.R
 \name{fars_read}
 \alias{fars_read}
-\title{Loads a CSV file}
+\title{Read a FARS file}
 \usage{
 fars_read(filename)
 }
 \arguments{
-\item{filename}{Path to the CSV file (character)}
+\item{filename}{A character string representing a filename}
 }
 \value{
-The function returns a tibble (data.frame) based on the CSV file.
+A data.frame with fars data from the file called 'filename'
 }
 \description{
-The function loads a CSV file defined by \code{filename} argument and returns
-a tibble. If the path is incorrect the function will end with an error.
+This Helper-function checks if the filename given exists and assumes the data
+is in .csv.bz2 format, which it will format as data frame.
+}
+\note{
+although the existance of the file (filename) is checked, it is
+assumed that the file is in csv format, if not a warning is passed by
+readr::read_csv.
+
+this package comes with three example files that can be accessed using
+\code{system.file("extdata", "accident_2013.csv.bz2", package = "farsfunctions")}
+\code{system.file("extdata", "accident_2014.csv.bz2", package = "farsfunctions")}
+\code{system.file("extdata", "accident_2015.csv.bz2", package = "farsfunctions")}
 }
 \examples{
 \dontrun{
-accident_2015 <- fars_read("./data/accident_2015.csv.bz2")
-}
+fars_read("accident_2015.csv.bz2")}
 
 }
-

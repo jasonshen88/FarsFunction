@@ -2,29 +2,29 @@
 % Please edit documentation in R/fars_functions.R
 \name{fars_summarize_years}
 \alias{fars_summarize_years}
-\title{Counts number of accidents per month and year}
+\title{Summarize FARS data over years}
 \usage{
 fars_summarize_years(years)
 }
 \arguments{
-\item{years}{A vector or list of years (numeric or integer) that will be
-searched in the data}
+\item{years}{A numeric vector containing the years of which the
+FARS data is asked}
 }
 \value{
-Returns a pivot tibble (data frame) with months in rows and selected
-years in columns containing the number of accidents. Returns a warning for
-every input year that does not exist in the datasets. Returns an error (no
-results) if a different than numeric or integer input is presented.
+A table of number of accidents with fatalities per month (rows)
+of the years asked for (columns)
 }
 \description{
-Based on the list of years, the function calculates the number of accidents
-in the US on a monthly basis. The accident files need to be in the working
-directory, the years can be passed as a list or a vector.
+This function summarises the number of accidents with fatalities per
+month and year over the years asked for.
+}
+\note{
+if a year is invalid, it is ignored. Much of the detail in the data
+available in the FARS dataset is ignored, as only number of fatalities are
+collected
 }
 \examples{
 \dontrun{
-fars_summarize_years(2013:2016)
-}
+fars_summarize_years(c(2013, 2014, 2015))}
 
 }
-
