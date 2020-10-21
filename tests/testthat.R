@@ -1,4 +1,4 @@
 library(testthat)
-library(fars)
+library(farsfunctions)
 
-test_check("fars")
+test_check("farsfunctions")
