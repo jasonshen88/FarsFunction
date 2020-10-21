@@ -1,4 +1,4 @@
----
+--- 
 title: "Overview of the FARS package"
 author: "Zdenek Kabat"
 date: "`r Sys.Date()`"
