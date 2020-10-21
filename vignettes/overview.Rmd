@@ -1,6 +1,6 @@
 --- 
 title: "Overview of the FARS package"
-author: "Zdenek Kabat"
+author: "HansKH"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
