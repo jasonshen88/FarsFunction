@@ -4,7 +4,7 @@
 \alias{fars_read}
 \title{Read a FARS file}
 \usage{
-fars_read(filename)
+fars_read(filename) 
 }
 \arguments{
 \item{filename}{A character string representing a filename}
