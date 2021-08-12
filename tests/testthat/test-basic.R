@@ -1,6 +1,6 @@
 context("Test the basic functionality of the package")
 
-library(dplyr)
+library(dplyr) 
 library(maps)
 
 setwd(system.file("extdata", package = "fars"))
