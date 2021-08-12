@@ -5,7 +5,7 @@
 \title{Create FARS data filename by year}
 \usage{
 make_filename(year)
-}
+} 
 \arguments{
 \item{year}{The year which the datafile is asked for.}
 }
