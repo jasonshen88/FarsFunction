@@ -3,7 +3,7 @@
 \name{fars_read_years}
 \alias{fars_read_years}
 \title{Read FARS data files of given years}
-\usage{
+\usage{ 
 fars_read_years(years)
 }
 \arguments{
