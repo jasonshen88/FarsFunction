@@ -6,7 +6,7 @@
 \usage{
 fars_map_state(state.num, year)
 }
-\arguments{
+\arguments{ 
 \item{state.num}{A single number identifying the state (see Note)}
 
 \item{year}{A single number representing the year from which data is asked}
