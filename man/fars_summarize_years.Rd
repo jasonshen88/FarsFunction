@@ -6,7 +6,7 @@
 \usage{
 fars_summarize_years(years)
 }
-\arguments{
+\arguments{ 
 \item{years}{A numeric vector containing the years of which the
 FARS data is asked}
 }
