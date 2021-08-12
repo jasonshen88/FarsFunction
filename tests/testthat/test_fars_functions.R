@@ -7,7 +7,7 @@ close(f)
 
 test_that("make_filename_string", {
     temp <- make_filename(2015)
-    l <- nchar(temp)
+    l <- nchar(temp) 
     expect_equal(l, 21)
     expect_is(temp, "character")
 })
