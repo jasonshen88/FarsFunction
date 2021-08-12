@@ -4,7 +4,7 @@
 #' The function loads a CSV file defined by \code{filename} argument and returns
 #' a tibble. If the path is incorrect the function will end with an error.
 #'
-#' @param filename Path to the CSV file (character)
+#' @param filename Path to the CSV file (characte r)
 #'
 #' @return The function returns a tibble (data.frame) based on the CSV file.
 #'
